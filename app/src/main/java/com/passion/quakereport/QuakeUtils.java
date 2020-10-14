@@ -22,6 +22,7 @@ public class QuakeUtils {
     private final static String LOG = QuakeUtils.class.getName();
 
    public static ArrayList<EarthQuake> makeRequestOfEarthQuakeData(String url_requst ) throws IOException{
+
        ArrayList<EarthQuake> list = new ArrayList<EarthQuake>();
        String jsonResponse = "";
 
@@ -126,6 +127,13 @@ public class QuakeUtils {
     }
 
     public static ArrayList<EarthQuake> extractEarthquakes(String jsonResponse){
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         ArrayList<EarthQuake> list = new ArrayList<EarthQuake>();
         EarthQuake earthQuakeData = null;
 
