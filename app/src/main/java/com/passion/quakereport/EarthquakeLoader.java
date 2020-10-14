@@ -30,7 +30,7 @@ public class EarthquakeLoader extends AsyncTaskLoader<ArrayList<EarthQuake>> {
         ArrayList<EarthQuake> list  = null;
 
         try{
-            list = QuakeUtils.makeRequestOfEarthQuakeData();
+            list = QuakeUtils.makeRequestOfEarthQuakeData(url);
         }
         catch(IOException e){
             Log.v(LOG + "Exception" , e.getMessage());
