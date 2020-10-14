@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateUI( ArrayList<EarthQuake> list ){
+
         // put data into list
         adapter = new EarthquakeAdapter(MainActivity.this, list );
         listView.setAdapter( adapter );
